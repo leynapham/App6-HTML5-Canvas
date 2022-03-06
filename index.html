@@ -42,7 +42,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function drawRectangle() {
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		context.fillRect(50,25,100,75);		
+		context.fillRect(50,25,150,100);		
 	}
 	
 	function drawName() {
@@ -62,7 +62,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function clearCanvas(){
 		var canvas = document.getElementByID("Canvas");
 		var context = canvas.getContext("2d");
-		context.clearRect(0,0,700,300);
+		context.clearRect(0,0,800,400);
 	}
 		
 </script>
@@ -100,7 +100,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 	<a onclick="drawRectangle();" class="w3-btn w3-round w3-black"> Draw a Rectangle</a> 
 	<a onclick="drawName();" class="w3-btn w3-round w3-black"> Print Name</a> 
-	<image id="crying cat" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Fpostcard%2FCrying-cookie-cat-meme-funny-meme-by-ElevenGraphics%2F64320666.V7PMD&psig=AOvVaw0NSGQSMpbjK_pvX85XMoid&ust=1646635997592000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjN7vXzsPYCFQAAAAAdAAAAABAI" width="100" height="250">
+	<image id="crying cat" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Fpostcard%2FCrying-cookie-cat-meme-funny-meme-by-ElevenGraphics%2F64320666.V7PMD&psig=AOvVaw0NSGQSMpbjK_pvX85XMoid&ust=1646635997592000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjN7vXzsPYCFQAAAAAdAAAAABAI" width="400" height="600">
 	<a onclick="loadImage();" class="w3-btn w3-round w3-black"> Print an Image</a> 
 	<a onclick="clearCanvas();" class="w3-btn w3-round w3-black"> Clear Canvas</a> 
 	
