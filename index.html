@@ -57,10 +57,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function loadImage() {
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		var image = new Image();
+		var cryingCat = new Image();
 		cryingCat.src ="https://ih1.redbubble.net/image.1907647730.0666/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
-		cryingCat.onload = function add_image(){
-			context.drawImage(image,0,0,400,500);
+		cryingCat.onload = function(){
+			context.drawImage(cryingCat,0,0,400,500);
 			} //add image and size
 	
 	}
