@@ -20,8 +20,8 @@ The goal of this code able to take a picture and display on the canvas. You shou
  
 Known Issues:
 Clearing the canvas
-Loading the image
-Printing name
+Loading the image correctly
+The name prints really tiny
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -40,38 +40,42 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
+	// this draws a rectangle
 	function drawRectangle() {
-		var canvas = document.getElementById("Canvas");
-		var context = canvas.getContext("2d");
-		context.fillRect(50,25,150,100);		
+		var canvas = document.getElementById("Canvas"); // the action will take place on the canvas
+		var context = canvas.getContext("2d"); // the canvas is in 2d
+		context.fillRect(50,25,150,100); // this is the size of the canvas		
 	}
 	
+	// this prints my name
 	function drawName() {
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		context.font = "30px Arial";
-		context.fillText("Leyna Pham",30,200);
+		context.font = "30px Arial"; // this is the size and font the text will be printed
+		context.fillText("Leyna Pham",30,200); // this is what the text will say and its coordinates (x,y)
 		
 	}
 	
+	// this prints an image
 	function loadImage() {
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		var cryingCat = new Image();
-		cryingCat.src ="https://ih1.redbubble.net/image.1907647730.0666/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+		var cryingCat = new Image(); // this creates a new image element
+		cryingCat.src ="https://ih1.redbubble.net/image.1907647730.0666/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" // this is the link to the image
 		cryingCat.onload = function(){
-			context.drawImage(cryingCat,0,0,400,500);
-			} //add image and size
+			context.drawImage(cryingCat,0,0,400,500); // thses are the coordinates and dimensions of the image (x,y,width,height)
+			} 
 	
 	}
 	
+	// this clears the whole canvas
 	function clearCanvas(){
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		context.clearRect(0,0,400,500);
+		context.clearRect(0,0,400,500); // makes sure the coordinates and dimensions are correct to clear everything
 	}
 		
-</script>
+</script> 
 
 
 
@@ -97,24 +101,24 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>My Canvas</h1>
+	<h1>My Canvas</h1> <!--this will be at the top of the page-->
 </div>
 	
 <div id="content" class="w3-container">
 	
-	<p> <canvas id="Canvas" width="400" height="500" style="border:1px solid black;"></canvas> <p>
+	<p> <canvas id="Canvas" width="400" height="500" style="border:1px solid black;"></canvas> <p> <!--this adds the dimensions and borders of the canvas-->
 	
-	<a onclick="drawRectangle();" class="w3-btn w3-round w3-black"> Draw a Rectangle</a> 
-	<a onclick="drawName();" class="w3-btn w3-round w3-black"> Print Name</a> 
-	<a onclick="loadImage();" class="w3-btn w3-round w3-black"> Print an Image</a> 
-	<a onclick="clearCanvas();" class="w3-btn w3-round w3-black"> Clear Canvas</a> 
+	<a onclick="drawRectangle();" class="w3-btn w3-round w3-black"> Draw a Rectangle</a> <!--this button will add the rectangle-->
+	<a onclick="drawName();" class="w3-btn w3-round w3-black"> Print Name</a> <!--this button will print my name-->
+	<a onclick="loadImage();" class="w3-btn w3-round w3-black"> Print an Image</a> <!--this button will load the image-->
+	<a onclick="clearCanvas();" class="w3-btn w3-round w3-black"> Clear Canvas</a> <!--this button will clear the canvas-->
 	
-		
+	<!--this text will be displayed-->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY!</p> <!--this will be the bottom of the page-->
 </footer>
 
 </body>
