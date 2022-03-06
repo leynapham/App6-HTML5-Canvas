@@ -50,7 +50,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
 		context.font = "30px Arial";
-		context.fillText("Leyna Pham",10,50);
+		context.fillText("Leyna Pham",30,400);
 		
 	}
 	
@@ -58,7 +58,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
 		var image = document.getElementById("crying cat");
-		context.drawImage(image,0,0); //add image and size
+		<image id="crying cat" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Fpostcard%2FCrying-cookie-cat-meme-funny-meme-by-ElevenGraphics%2F64320666.V7PMD&psig=AOvVaw0NSGQSMpbjK_pvX85XMoid&ust=1646635997592000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjN7vXzsPYCFQAAAAAdAAAAABAI" width="400" height="600">
+		context.drawImage(image,0,0,500,400); //add image and size
+	
 	}
 	
 	function clearCanvas(){
@@ -102,7 +104,6 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 	<a onclick="drawRectangle();" class="w3-btn w3-round w3-black"> Draw a Rectangle</a> 
 	<a onclick="drawName();" class="w3-btn w3-round w3-black"> Print Name</a> 
-	<image id="crying cat" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Fpostcard%2FCrying-cookie-cat-meme-funny-meme-by-ElevenGraphics%2F64320666.V7PMD&psig=AOvVaw0NSGQSMpbjK_pvX85XMoid&ust=1646635997592000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjN7vXzsPYCFQAAAAAdAAAAABAI" width="400" height="600">
 	<a onclick="loadImage();" class="w3-btn w3-round w3-black"> Print an Image</a> 
 	<a onclick="clearCanvas();" class="w3-btn w3-round w3-black"> Clear Canvas</a> 
 	
