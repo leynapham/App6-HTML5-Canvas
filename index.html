@@ -46,9 +46,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 	
 	function drawName() {
-		var canvas = document.getELementById("Canvas");
+		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		context.fillText("Leyna Pham",10,50);
+		context.fillText("Leyna Pham",30,60);
 		context.font = "30px Arial";
 	}
 	
@@ -60,7 +60,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 	
 	function clearCanvas(){
-		var canvas = document.getElementByID("Canvas");
+		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
 		context.clearRect(0,0,800,400);
 	}
