@@ -21,6 +21,7 @@ The goal of this code able to take a picture and display on the canvas. You shou
 Known Issues:
 Clearing the canvas
 Loading the image
+Printing name
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -48,15 +49,16 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function drawName() {
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
-		context.fillText("Leyna Pham",10,50);
 		context.font = "30px Arial";
+		context.fillText("Leyna Pham",10,50);
+		
 	}
 	
 	function loadImage() {
 		var canvas = document.getElementById("Canvas");
 		var context = canvas.getContext("2d");
 		var image = document.getElementById("crying cat");
-		context.drawImage(image,10,10); //add image and size
+		context.drawImage(image,0,0); //add image and size
 	}
 	
 	function clearCanvas(){
@@ -96,7 +98,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 	
-	<p> <canvas id="Canvas" width="700" height="400" style:"border:1px solid #000000;"></canvas> <p>
+	<p> <canvas id="Canvas" width="500" height="400" style="border:1px solid black;"></canvas> <p>
 	
 	<a onclick="drawRectangle();" class="w3-btn w3-round w3-black"> Draw a Rectangle</a> 
 	<a onclick="drawName();" class="w3-btn w3-round w3-black"> Print Name</a> 
